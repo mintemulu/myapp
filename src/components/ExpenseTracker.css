@@ -1,0 +1,78 @@
+.expense-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start; /* Align items at the start of the container vertically */
+    margin: 20px auto;
+    max-width: 1000px; /* Limit the maximum width of the container */
+    gap: 20px; /* Add space between the form and the list */
+}
+
+.expense-form, .expense-list {
+    flex: 1; /* Allow flexibility for both components */
+    margin-bottom: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px; /* Ensure individual components aren't too wide */
+}
+
+.expense-form h2, .expense-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.expense-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+.expense-list{
+    margin-left: 465px;
+    margin-top: -522px;
+}
+
+.expense-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-list li {
+    padding: 5px 0;
+}
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+
+.expense-list h3 {
+    text-align: center;
+    margin-top: 20px;
+}

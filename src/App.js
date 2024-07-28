@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+// App.js
+
+import React, { useState } from 'react';
 import './App.css';
+import ExpenseForm from './components/ExpenseForm';
+import ExpenseList from './components/ExpenseList';
+import ChartComponent from './components/ChartComponent';
 
 function App() {
-  return (
+const [expenses, setExpenses] = useState([]);
+
+const addExpense = (newExpense) => {
+    setExpenses([...expenses, newExpense]);
+};
+
+return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Personal Finance Manager</h1>
+    <ExpenseForm addExpense={addExpense} />
+    <ExpenseList expenses={expenses} />
+    <ChartComponent expenses={expenses} />
     </div>
-  );
+);
 }
 
 export default App;
